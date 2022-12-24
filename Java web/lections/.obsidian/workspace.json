@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "069b46edc2678940",
+    "type": "split",
+    "children": [
+      {
+        "id": "dda5e5856a1705f4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eb36243976bdb8ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTML+CSS+JQuery.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4a0d889578a638c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Введение.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3216ee9df6af7973",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTML+CSS+JQuery.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d18047ab31b8a7d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SQL, MySql(MariaDB).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "29c5472c2267d721",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Остальное.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c42b3d2fafc7920a",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3131e07268c1369",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "142a937a169035eb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7f0b69ff01f09958",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d1b5a52940bcba0b",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0af5d60dafca8658",
+    "type": "split",
+    "children": [
+      {
+        "id": "db02774b299b6c8a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a652ff518ea7f943",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "HTML+CSS+JQuery.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5275b1b8d8ba3374",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "HTML+CSS+JQuery.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "feb87de8d1f770bf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "45f18d16e9ce6430",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "HTML+CSS+JQuery.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "3216ee9df6af7973",
+  "lastOpenFiles": [
+    "HTTP.md",
+    "Java Spring.md",
+    "resources/Pasted image 20221220000425.png",
+    "resources/Pasted image 20221103212439.png",
+    "resources/Pasted image 20221103205126.png",
+    "resources/Diagram 7.svg",
+    "resources/Diagram 2.svg",
+    "Настройка IDE.md",
+    "Введение.md",
+    "HTML+CSS+JQuery.md"
+  ]
+}

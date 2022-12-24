@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список бронирований</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #my_table {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<table id="my_table">
+    <tr class="head">
+        <th>Кабинет</th>
+        <th>Учитель</th>
+        <th>Цель</th>
+        <th>С</th>
+        <th>До</th>
+    </tr>
+    <tr>
+        <td class="table1">108</td>
+        <td class="table1">Я</td>
+        <td class="table1">Надо</td>
+        <td class="table1">01.01.2023 10:00:00</td>
+        <td class="table1">01.01.2023 12:00:00</td>
+    </tr>
+    <tr>
+        <td class="table1">108</td>
+        <td class="table1">не я</td>
+        <td class="table1">не очень <br> то и надо</td>
+        <td class="table1">01.01.2023 10:00:00</td>
+        <td class="table1">01.01.2023 12:00:00</td>
+    </tr>
+</table>
+</body>
+
+<button id="load" style="margin: 10px">обновить</button>
+
+<h3>Забронировать кабинет</h3>
+<form>
+    <table>
+        <tr><td><label>Кабинет: <input id="cabinet"/></label></tr>
+        <tr><td><label>Учитель: <input id="teacher"/></label></td></tr>
+        <tr><td><label>Цель: <input id="purpose"/></label></td></tr>
+        <tr><td><label>С: <input id="startTime"/></label></td></tr>
+        <tr><td><label>До: <input id="endTime"/></label></td></tr>
+    </table>
+    <button id="send">Забронировать</button>
+</form>
+
+<script>
+    const BASE_URL = "http://localhost:8080"
+    $("#load").click(function () {
+        get(BASE_URL + "/get_reservations", {}, function (data, status) {
+            const my_table = $("#my_table")
+            my_table.children().children().not(".head").remove() // удаляем то, что сейчас есть в таблице
+            for (let i = 0; i < data.length; i++) {
+                const reservation = data[i]
+                const row = $("<tr></tr>") // проходим по всем объектам в массиве, который получили в ответ на запрос
+                    .append("<td>" + reservation.classNumber + "</td>") // собираем ряд (<tr>)
+                    .append("<td>" + reservation.teacherId + "</td>")
+                    .append("<td>" + reservation.reason + "</td>")
+                    .append("<td>" + reservation.startTime + "</td>")
+                    .append("<td>" + reservation.endTime + "</td>")
+                my_table.append(row) // добавляем его в таблицу
+            }
+        })
+    })
+
+    $("#send").click(function () {
+        post(BASE_URL + "/reserve", {
+            classNumber: $("#cabinet").val(), // val() возвращает содержимое input
+            teacherId: $("#teacher").val(),
+            reason: $("#purpose").val(),
+            startTime: $("#startTime").val(),
+            endTime: $("#endTime").val(),
+        }, function () {console.log("sent")})
+        return false; // по умолчанию кнопка в форме перегружает страницу. Нам это не нужно.
+        // Чтобы отменить действие по умолчанию, нужно вернуть false
+    })
+</script>
+</html>
